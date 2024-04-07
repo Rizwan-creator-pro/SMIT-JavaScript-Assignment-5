@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom CSS  -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>javaScript</title>
+</head>
+
+<body id="body">
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" id="color">
+            <div class="container">
+                <a class="navbar-brand" href="#">Assignment</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Chapter 21 - 25 </a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <div class="row text-center mt-5">
+                <div class="col">
+                    <h4>Chapter # 21 - 25 | Strings & It's Methods</h4>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <!-- sections -->
+        <div class="container overflow-hidden mt-5">
+            <!-- Input section -->
+            <div class="row gy-5">
+                <div class="col-12 col-md-6">
+                    <h5 class="text-center">Input</h5>
+                    <div class="p-4 border border-secondary border-2 rounded">
+                        <div class="d-flex">
+                            <input class="form-control bg-transparent p-3" type="search"
+                                placeholder="Type your text here" id="input">
+                            <button class="btn btn-outline-secondary" onclick="clearInput()">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Original string section -->
+                <div class="col-12 col-md-6">
+                    <h5 class="text-center">Original String</h5>
+                    <div class="rounded d-flex justify-content-center align-items-center " id="color_city">
+                        <p class="text-white text-center ">I love my country
+                            Pakistan. <br> I like my
+                            city Faisalabad.
+                            <br> I love my Homeland.
+                        </p>
+                    </div>
+                </div>
+                <!-- Buttons Sections -->
+                <div class="col-12 col-md-6">
+                    <h5 class="text-center">Buttons</h5>
+                    <div class="p-3 border border-secondary border-2 rounded">
+                        <div class="container">
+                            <div class="row g-2">
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn w-100 btn-danger" onclick="lowercase()">Convert
+                                        to Lowercase</button>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn w-100 btn-danger" onclick="uppercase()">Convert to
+                                        Uppercase</button>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn w-100 btn-danger" onclick="capitalize()">Convert to
+                                        Capitalize</button>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn w-100 btn-danger"
+                                        onclick="betterFormatting()">Better Formatting</button>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn w-100 btn-danger" onclick="printcities()">Print All
+                                        Cities</button>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn w-100 btn-danger" onclick="addCityInList()">Add
+                                        Your City In List</button>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn w-100 btn-danger">Check Your City In List</button>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <button type="button" class="btn w-100 btn-danger">Find This Word</button>
+                                </div>
+                                <div class="col-12 col-lg-6 mx-auto">
+                                    <button type="button" class="btn w-100 btn-danger">Replace This Word</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Output / Result section -->
+                <div class="col-12 col-md-6 text-center">
+                    <h5>Output / Result</h5>
+                    <div class="p-2 border border-secondary border-2 rounded" id="output">
+                    </div>
+                    <button class="btn btn-outline-secondary mt-3" onclick="clearOutput()">Clear Output</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="pt-5">
+        <div class="container-fluid mt-5 " id="color">
+            <div class="row text-center">
+                <div class="col text-white">
+                    <p class="p-2 ">&copy; 2024. Assignments By <b>Muhammad Rizwan Ahmad</b></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Custom js -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
